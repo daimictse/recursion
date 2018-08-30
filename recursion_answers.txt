@@ -1,0 +1,33 @@
+Exercises
+
+1. Iteration is the technique of using a loop to repeat a process, and recursion is a procedure calls itself with parameters moving toward one of the base cases. Iteration works better when an algorithm requires a pass over a collection and recursion is better when an algorithm can be defined as a combination of sub-results starting with known cases. In some cases, one technique seems to work better than the other, but takes longer runtime.
+
+2. Factorial, Fibonacci, BinarySearch, MergeSort, and QuickSort are algorithms implemented by recursion.
+
+3. Use recursion when a problem can be broken down into smaller problems until the problems can be solved trivially and is with base cases. For example, to find the height of a tree, you repeatedly visit each node until there's no more left node and/or right node on it. The maximum height between the right and left node would return to the level above.
+When it's only necessary to run straight through a data set, it's better not to use recursion because it complicated the algorithm and cause a performance concern in some cases. For example, finding the maximum of an array only requires a single iteration of the array. It's simple and straight forward to use iteration.
+
+4. Factorial: Both recursion and iteration have O(n), but recursion technique calls factorial(1) when n is down to 1 whereas iteration can skip the handling of base cases by initializing result to 1 and stop the iteration when n is down to 2.
+Maximum: Recursion looks much more complicated and is a longer algorithm when both techniques takes the same time complexity. Iteration is a much more straight forward solution.
+Fibonacci: the recursive implementation seems more straight forward, but the tendency to repeat calculations introduces a performance concern that outweighs the cost of the slightly more complex iterative implementation.
+
+5.
+function numOfItemInArray(ar) {
+  if (ar.length) {
+    for (var i=0; i < ar.length; i++) {
+      return ar.length * numOfItemInArray(ar[i]);
+    }
+  }
+  return 1;
+}
+
+6.
+function isPalindrome(str) {
+  if (str.length < 2)
+    return true;
+  if (str[0] !== str[str.length-1])
+    return false;
+  return isPalindrome(str.substr(1, str.length-2));
+}
+
+7. I think Google tries to demonstrate what recursion is. By displaying 'Did you mean: recursion' with the word recursion being a link, which when clicked, to display the same page again, it shows you what recursion means in place.
