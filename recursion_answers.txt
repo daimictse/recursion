@@ -15,10 +15,10 @@ Fibonacci: the recursive implementation seems more straight forward, but the ten
 function numOfItemInArray(ar) {
   if (ar.length) {
     for (var i=0; i < ar.length; i++) {
-      return ar.length * numOfItemInArray(ar[i]);
-    }
+    return ar.length + numOfItemInArray(ar[i]);
   }
-  return 1;
+  }
+  return 0;
 }
 
 6.
