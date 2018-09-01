@@ -17,7 +17,6 @@ function numOfItemInArray(ar) {
     for (var i=0; i < ar.length; i++) {
     return ar.length + numOfItemInArray(ar[i]);
   }
-  }
   return 0;
 }
 
